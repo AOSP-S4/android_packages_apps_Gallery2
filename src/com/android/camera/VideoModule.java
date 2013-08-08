@@ -1540,8 +1540,6 @@ public class VideoModule implements CameraModule,
 
     private void startVideoRecording() {
         Log.v(TAG, "startVideoRecording");
-        mUI.enablePreviewThumb(false);
-        mActivity.setSwipingEnabled(false);
 
         mActivity.updateStorageSpaceAndHint();
         if (mActivity.getStorageSpace() <= Storage.LOW_STORAGE_THRESHOLD) {
@@ -1586,6 +1584,9 @@ public class VideoModule implements CameraModule,
                 return;
             }
         }
+
+        mUI.enablePreviewThumb(false);
+        mActivity.setSwipingEnabled(false);
 
         // Make sure the video recording has started before announcing
         // this in accessibility.
