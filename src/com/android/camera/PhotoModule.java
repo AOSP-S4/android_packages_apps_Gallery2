@@ -1894,7 +1894,7 @@ public class PhotoModule
         // Set JPEG quality.
         int jpegQuality = CameraProfile.getJpegEncodingQualityParameter(mCameraId,
                 CameraProfile.QUALITY_HIGH);
-        mParameters.setJpegQuality(jpegQuality);
+        mParameters.setJpegQuality(100);
 
         // For the following settings, we need to check if the settings are
         // still supported by latest driver, if not, ignore the settings.
