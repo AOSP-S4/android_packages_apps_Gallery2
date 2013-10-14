@@ -1932,6 +1932,8 @@ public class VideoModule implements CameraModule,
                 CameraProfile.QUALITY_HIGH);
         mParameters.setJpegQuality(jpegQuality);
 
+        Util.dumpParameters(mParameters);
+
         mActivity.mCameraDevice.setParameters(mParameters);
         // Keep preview size up to date.
         mParameters = mActivity.mCameraDevice.getParameters();
